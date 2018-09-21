@@ -14,7 +14,7 @@
     <![endif]-->
 </head>
 <body <?php body_class(); ?>>
-<header id="pi-header">
+<header id="pi-header" style="z-index:10000 !important;">
   <?php pitemplate_top(); ?>
   <?php pitemplate_menu(); ?>
 </header>

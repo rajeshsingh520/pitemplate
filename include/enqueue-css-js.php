@@ -13,7 +13,12 @@ function pitemplate_enqueue_css(){
         wp_enqueue_style('bootstrap');
         wp_enqueue_style('fontawesome');
         wp_enqueue_style('comment');
+       
         wp_enqueue_style('pitemplate-style');
+    }
+
+    if( get_theme_mod('animation', 1)){
+        wp_enqueue_style('animate');
     }
     
 }
@@ -53,12 +58,26 @@ function pitemplate_enqueue_js(){
     /*
         Responsive Font librarry for display-1 to display-4 class
     */
+    if( get_theme_mod('fittext', 0)){
     wp_enqueue_script('fittext');
         wp_add_inline_script( 'fittext','
             jQuery(document).ready(function($){
-                $(\'.display-1, .display-2, .display-3, .display-4\').fitText(0.8);
+                $(\'.display-1, .display-2\').fitText(0.8);
             });
         ');
+        }
+    
+    /*
+            Animation wow.js
+    */
+    if( get_theme_mod('animation', 1)){
+        wp_enqueue_script('wow');
+        wp_add_inline_script( 'wow','
+            jQuery(document).ready(function($){
+                new WOW().init();
+            });
+        ');
+    }
 
 }
 add_action('wp_enqueue_scripts', 'pitemplate_enqueue_js');

@@ -92,5 +92,60 @@ function pitemplate_developer_option($wp_customize){
             )
         )
     );
+
+    /*
+       Animation
+    */
+    $wp_customize->add_setting(
+        'animation',
+        array(
+            'default'     => 1
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'animation',
+            array(
+                'label'          => __( 'Animation (animate.css and wow.js)', 'pitemplate' ),
+                'description'   => 'animation',
+                'section'        => 'pitemplate_developer',
+                'settings'       => 'animation',
+                'type'           => 'radio',
+                'choices'        => array(
+                    '1'   => __( 'Load' ),
+                    '0'  => __( 'No' )
+                )
+            )
+        )
+    );
+
+    /* Responsive font library */
+
+    $wp_customize->add_setting(
+        'fittext',
+        array(
+            'default'     => 0
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+            'fittext',
+            array(
+                'label'          => __( 'Fittext librarry for B4 display-1 to 4 class', 'pitemplate' ),
+                'description'   => 'fittext',
+                'section'        => 'pitemplate_developer',
+                'settings'       => 'fittext',
+                'type'           => 'radio',
+                'choices'        => array(
+                    '1'   => __( 'Load' ),
+                    '0'  => __( 'No' )
+                )
+            )
+        )
+    );
 }
   add_action( 'customize_register', 'pitemplate_developer_option' );

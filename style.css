@@ -7,7 +7,3 @@ Description: This is a base theme using Bootstrap 4
 Version: 1.0.0
 Github Theme URI: https://github.com/rajeshsingh520/pitemplate
 */
-
-#pi-header{
-    z-index:10000 !important;
-}
