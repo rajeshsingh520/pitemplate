@@ -1,0 +1,13 @@
+/*
+Theme Name: pitemplate
+Author: Rajesh Singh
+Author URI: http://www.100dollarswebsites.com/
+Site url: http://piwebsolution.com
+Description: This is a base theme using Bootstrap 4
+Version: 1.0.0
+Github Theme URI: https://github.com/rajeshsingh520/pitemplate
+*/
+
+#pi-header{
+    z-index:10000 !important;
+}

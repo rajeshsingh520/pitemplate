@@ -1,0 +1,11 @@
+.custom-logo{
+    transition:all 1.5s;
+}
+
+.is-sticky.shrink .custom-logo{
+    height:30px;
+}
+
+#pitemplate_menu{
+    z-index:100000 !important;
+}

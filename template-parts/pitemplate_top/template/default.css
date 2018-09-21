@@ -1,0 +1,7 @@
+#pitemplate_top{
+    transition:all 1s;
+}
+
+.is-sticky .hide-on-sticky{
+    display:none !important;
+}
