@@ -15,17 +15,23 @@ class generate_color{
     function pitemplate_color_css() {
 
         $panel_name = $this->panel_name;
+
+        $combine_css = get_theme_mod('style_combine', 0);
       
         $template = get_theme_mod('template_'.$panel_name.'_layout','default');
         
         if($this->external_css){
+          /*
           wp_enqueue_style(
             $panel_name,
               get_template_directory_uri() . '/template-parts/'.$panel_name.'/template/'.$template.'.css'
                 );
+          */
+           $file_content = file_get_contents(get_template_directory_uri() . '/template-parts/'.$panel_name.'/template/'.$template.'.css');
+           $custom_css = $file_content;
+        }else{
+           $custom_css ="";
         }
-      
-        $custom_css ="";
         
         $bg_color = get_theme_mod( 'bg_'.$panel_name.'_color','#000' ); //E.g. #FF0000
         $font_color = get_theme_mod( 'font_'.$panel_name.'_color','#fff' ); //E.g. #FF0000
@@ -59,11 +65,13 @@ class generate_color{
                         color:{$icon_hover_color};
                       }
                       ";  
-        if($this->external_css){
-              wp_add_inline_style( $panel_name, $custom_css );
-        }else{
+        
+              if($combine_css == 0){
                 wp_add_inline_style( 'bootstrap', $custom_css );
-        }
+              }else{
+                wp_add_inline_style( 'pitemplate-combine', $custom_css );
+              }
+        
               
       }
 }

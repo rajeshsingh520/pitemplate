@@ -87,7 +87,7 @@ function pitemplate_developer_option($wp_customize){
                 'type'           => 'radio',
                 'choices'        => array(
                     '1'   => __( 'Smooth scroll' ),
-                    '0'  => __( 'no' )
+                    '0'  => __( 'No' )
                 )
             )
         )

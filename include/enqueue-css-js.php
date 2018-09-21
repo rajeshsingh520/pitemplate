@@ -5,10 +5,16 @@
 */
 function pitemplate_enqueue_css(){
 
-    wp_enqueue_style('bootstrap');
-    wp_enqueue_style('fontawesome');
-    wp_enqueue_style('comment');
-    wp_enqueue_style('pitemplate-style');
+    
+
+    if( get_theme_mod('style_combine', 0)){
+        wp_enqueue_style('pitemplate-combine',get_template_directory_uri().'/css/template.css.php');
+    }else{
+        wp_enqueue_style('bootstrap');
+        wp_enqueue_style('fontawesome');
+        wp_enqueue_style('comment');
+        wp_enqueue_style('pitemplate-style');
+    }
     
 }
 add_action('wp_enqueue_scripts', 'pitemplate_enqueue_css');

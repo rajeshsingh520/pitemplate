@@ -11,6 +11,12 @@ if(get_theme_mod('admin_bar',0) == 0){
 include_once(get_template_directory().'/include/register-css-js.php');
 
 /*
+    Enqueue CSS and JS
+    (enqueue is attaches the css and js to document code)
+*/
+include_once(get_template_directory().'/include/enqueue-css-js.php');
+
+/*
     Widgets
 */
 include_once(get_template_directory().'/template-parts/general/pitemplate_widgets.php');
@@ -28,11 +34,8 @@ include_once(get_template_directory().'/template-parts/pitemplate_menu/pitemplat
 include_once(get_template_directory().'/template-parts/pitemplate_footer/pitemplate_footer.php');
 include_once(get_template_directory().'/template-parts/pitemplate_copyright/pitemplate_copyright.php');
 
-/*
-    Enqueue CSS and JS
-    (enqueue is attaches the css and js to document code)
-*/
-include_once(get_template_directory().'/include/enqueue-css-js.php');
+
+
 
 /*
 	 * Let WordPress manage the document title.
