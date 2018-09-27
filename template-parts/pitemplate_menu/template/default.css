@@ -8,4 +8,5 @@
 
 #pitemplate_menu{
     z-index:100000 !important;
+    -webkit-transform: translateZ(0);
 }
