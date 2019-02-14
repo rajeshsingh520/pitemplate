@@ -4,6 +4,12 @@ if(get_theme_mod('admin_bar',0) == 0){
     add_filter('show_admin_bar', '__return_false');
 }
 
+$GLOBALS['primary_color'] = "#ee6443"; // this is used for the link color
+$GLOBALS['secondary_color'] = "#00a69f"; //this is used for link hover color
+$GLOBALS['thrid_color'] = "#eda11b"; // this is icon normal color
+$GLOBALS['dark_color'] = "#1a4562"; // font color
+$GLOBALS['light_color'] = "#ffffff"; //background color
+
 /*
     Register css and js
     (only registers the css and js does not add it to docuent)
