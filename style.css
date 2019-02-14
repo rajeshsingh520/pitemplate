@@ -7,3 +7,25 @@ Description: This is a base theme using Bootstrap 4
 Version: 1.0.0
 Github Theme URI: https://github.com/rajeshsingh520/pitemplate
 */
+
+
+body.open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
+/** Guttenberg support */
+.alignwide,
+.alignfull {
+  margin: 0px calc(50% - 50vw);
+  max-width: 100vw;
+  width: 100vw;
+}
+
+/* End */
