@@ -10,6 +10,7 @@ $GLOBALS['thrid_color'] = "#eda11b"; // this is icon normal color
 $GLOBALS['dark_color'] = "#1a4562"; // font color
 $GLOBALS['light_color'] = "#ffffff"; //background color
 
+
 /*
     Register css and js
     (only registers the css and js does not add it to docuent)
@@ -50,6 +51,11 @@ include_once(get_template_directory().'/template-parts/pitemplate_copyright/pite
 	 * provide it for us.
 */
 add_theme_support( 'title-tag' );
+
+add_theme_support( 'align-wide' );
+
+add_theme_support( 'editor-styles' );
+add_editor_style( 'editor-style.css' );
 
 /*
     Title function:
