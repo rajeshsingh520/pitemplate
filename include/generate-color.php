@@ -33,8 +33,8 @@ class generate_color{
            $custom_css ="";
         }
         
-        $bg_color = get_theme_mod( 'bg_'.$panel_name.'_color','#000' ); //E.g. #FF0000
-        $font_color = get_theme_mod( 'font_'.$panel_name.'_color','#fff' ); //E.g. #FF0000
+        $bg_color = get_theme_mod( 'bg_'.$panel_name.'_color',$GLOBALS['light_color'] ); //E.g. #FF0000
+        $font_color = get_theme_mod( 'font_'.$panel_name.'_color',$GLOBALS['dark_color'] ); //E.g. #FF0000
         $custom_css .= "
               #".$panel_name."{
                               background-color: {$bg_color};
@@ -42,8 +42,8 @@ class generate_color{
                       }";
       
       
-        $link_color = get_theme_mod( 'link_'.$panel_name.'_color','#ccc' ); //E.g. #FF0000
-        $link_hover_color = get_theme_mod( 'link_hover_'.$panel_name.'_color','#000' ); //E.g. #FF0000
+        $link_color = get_theme_mod( 'link_'.$panel_name.'_color',$GLOBALS['primary_color'] ); //E.g. #FF0000
+        $link_hover_color = get_theme_mod( 'link_hover_'.$panel_name.'_color',$GLOBALS['secondary_color'] ); //E.g. #FF0000
         $custom_css .= "
               #".$panel_name." a{
                               color:{$link_color};
@@ -54,8 +54,8 @@ class generate_color{
                       }
                       ";
       
-        $icon_color = get_theme_mod( 'icon_'.$panel_name.'_color','#000' ); //E.g. #FF0000
-        $icon_hover_color = get_theme_mod( 'icon_hover_'.$panel_name.'_color','#000' ); //E.g. #FF0000
+        $icon_color = get_theme_mod( 'icon_'.$panel_name.'_color',$GLOBALS['thrid_color'] ); //E.g. #FF0000
+        $icon_hover_color = get_theme_mod( 'icon_hover_'.$panel_name.'_color',$GLOBALS['secondary_color'] ); //E.g. #FF0000
         $custom_css .= "
               #".$panel_name." .fab, #".$panel_name." .fas{
                               color:{$icon_color};
