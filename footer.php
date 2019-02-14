@@ -9,12 +9,22 @@
 <?php pitemplate_copyright(); ?>
 
 <?php wp_footer(); ?>
-<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
 <script>
- WebFont.load({
-    google: {
-      families: ['Roboto:400,700,900,400italic']
-    }
+
+  var font400 = new FontFaceObserver("Open Sans",{weight: 400});
+  var font600 = new FontFaceObserver("Open Sans",{weight: 600});
+  var font700 = new FontFaceObserver("Open Sans",{weight: 700});
+  var font800 = new FontFaceObserver("Open Sans",{weight: 800});
+
+  Promise.all([
+    font400.load(),
+    font600.load(),
+    font700.load(),
+    font800.load()
+]).then(function () {
+    jQuery("body").addClass("open-sans")
+  }, function () {
+    console.log('Font is not available');
   });
 </script>
 </body>
